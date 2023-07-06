@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* 
+CSS styles document for languages
+*/
+
+.selected-lang {
+    cursor: pointer;
+}
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    position: absolute;
+    right: auto;
+    z-index: 1;
+    background-color: var(--black);
+    border: 1px solid var(--gold);
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    display: none;
+}
+
+.lang-menu ul li {
+    list-style: none;
+}
+
+.lang-menu ul li a {
+    width: 75px;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.lang-menu ul li a:hover {
+    background-color: var(--black-pale);
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+    color: var(--gold);
+}

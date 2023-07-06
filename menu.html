@@ -1,0 +1,394 @@
+<!-- HTML document for Menu Page 
+Developped by: Xuanwei Liu
+Date: July 05, 2023 -->
+
+<!DOCTYPE html>
+<html lang="en" class="html">
+
+<head>
+    <!-- Meta Elements -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Xuanwei Liu">
+    <meta name="description" content="Menu Page">
+    <meta name="keyword" content="Menu, Beverages, Lunch, Dinner">
+
+    <!-- Favicon and Icon link rels and metas -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <!-- Google API Raleway, font-family: 'Raleway', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Google API Open Sans,  font-family: 'Open Sans', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!-- stylesheet links -->
+    <!-- Font Awesome pre-styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+    <!-- Site Styles -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/languages.css">
+    <link rel="stylesheet" href="styles/menu.css">
+
+    <!-- Scripts links -->
+    <!-- Site Scripts -->
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <!--还没做-->
+    <script src="scripts/toastify.js" defer></script>
+    <script src="scripts/browserdb.js" defer></script>
+
+
+    <title>Menu</title>
+</head>
+
+<body class="body">
+    <!-- container -->
+    <div class="container">
+
+        <!-- header section -->
+        <header class="header">
+            <a href="index.html" class="logo"> <i class="fas fa-utensils"></i> Name</a>
+            <nav class="navcart">
+                <nav class="navbar">
+                    <a href="index.html">home</a>
+                    <a href="menu.html">menu</a>
+                    <a href="about.html">about</a>
+                    <a href="contact.html">contact</a>
+
+                </nav>
+                <div id="nav-btn" class="fas fa-bars icons"></div>
+                <a href="cart.html" class="fas fa-shopping-cart icons"></a>
+                <div class="lang-menu">
+                    <div class="selected-lang">
+                        <i id="langBtn" onclick="languages()" class="fas fa-globe icons"> En</i>
+                    </div>
+                    <ul id="langChoices" style="display:none;">
+                        <li>
+                            <a href="fr/menu.html" lang="fr">Français</a>
+                        </li>
+                        <li>
+                            <a href="menu.html">English</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+
+        <!-- main section -->
+        <main class="main">
+            <!-- beverages section -->
+            <!-- items -->
+            <div class="items">
+
+                <div class="fast-move">
+                    <a href="#lunch">lunch</a> <span>|</span>
+                    <a href="#dinner">dinner</a>
+                </div>
+
+                <h3 class="title" id="beverages">beverages</h3>
+                <!-- add items in this container -->
+                <div class="items-container">
+                    <div class="item" data-name="b-1">
+                        <img src="images/menu/drink_1.jpg" alt="Mango Smoothie">
+                        <h3>Mango Smoothie</h3>
+                        <div class="price">$5.95</div>
+                    </div>
+                    <div class="item" data-name="b-2">
+                        <img src="images/menu/drink_2.jpg" alt="Beverage 2">
+                        <h3>Beverage 2</h3>
+                        <div class="price">$5.95</div>
+                    </div>
+                    <div class="item" data-name="b-3">
+                        <img src="images/menu/drink_3.jpg" alt="Beverage 3">
+                        <h3>Beverage 3</h3>
+                        <div class="price">$4.95</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- lunch section -->
+            <!-- items -->
+            <div class="items">
+
+                <div class="fast-move">
+                    <a href="#beverages">beverage</a> <span>|</span>
+                    <a href="#dinner">dinner</a>
+                </div>
+                <h3 class="title" id="lunch">lunch</h3>
+
+                <!-- add items in this container -->
+                <div class="items-container">
+                    <div class="item" data-name="l-1">
+                        <img src="images/menu/lunch_1.png" alt="Salad">
+                        <h3>Salad</h3>
+                        <div class="price">$7.95</div>
+                    </div>
+                    <div class="item" data-name="l-2">
+                        <img src="images/menu/lunch_2.jpg" alt="Lunch 2">
+                        <h3>Lunch 2</h3>
+                        <div class="price">$6.95</div>
+                    </div>
+                    <div class="item" data-name="l-3">
+                        <img src="images/menu/lunch_3.jpg" alt="Lunch 3">
+                        <h3>Lunch 3</h3>
+                        <div class="price">$8.95</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- dinner section -->
+            <!-- items -->
+            <div class="items">
+
+                <div class="fast-move">
+                    <a href="#beverages">beverage</a> <span>|</span>
+                    <a href="#lunch">lunch</a>
+                </div>
+                <h3 class="title" id="dinner">dinner</h3>
+
+                <!-- add items in this container -->
+                <div class="items-container">
+                    <div class="item" data-name="d-1">
+                        <img src="images/menu/dinner_1.png" alt="Sandwich">
+                        <h3>Sandwich</h3>
+                        <div class="price">$11.95</div>
+                    </div>
+                    <div class="item" data-name="d-2">
+                        <img src="images/menu/dinner_2.jpg" alt="Dinner 2">
+                        <h3>Dinner 2</h3>
+                        <div class="price">$10.95</div>
+                    </div>
+                    <div class="item" data-name="d-3">
+                        <img src="images/menu/dinner_3.jpg" alt="Dinner 3">
+                        <h3>Dinner 3</h3>
+                        <div class="price">$13.95</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="items-card">
+                <!-- add cards from here with proper data-target -->
+
+                <!-- drinks -->
+                <div class="card" data-target="b-1">
+                    <i class="fas fa-times"></i>
+                    <img src="images/menu/drink_1.jpg" alt="Mango Smoothie">
+                    <h3>Mango Smoothie</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <br>
+                    <h3>Ingredients</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                    <div class="price">$5.95</div>
+                    <div class="buttons">
+                        <button type="button" class="btn" onclick="addProduct('s-1')">add to <i
+                                class="fas fa-shopping-cart"></i></button>
+                        <a href="cart.html" class="btn">go to <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+
+                <div class="card" data-target="b-2">
+                    <i class="fas fa-times"></i>
+                    <img src="images/menu/drink_2.jpg" alt="Beverage 2">
+                    <h3>Beverage 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <br>
+                    <h3>Ingredients</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                    <div class="price">$5.95</div>
+                    <div class="buttons">
+                        <button type="button" class="btn" onclick="addProduct('s-2')">add to <i
+                                class="fas fa-shopping-cart"></i></button>
+                        <a href="cart.html" class="btn">go to <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+
+                <div class="card" data-target="b-3">
+                    <i class="fas fa-times"></i>
+                    <img src="images/menu/drink_3.jpg" alt="Beverage 3">
+                    <h3>Beverage 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <br>
+                    <h3>Ingredients</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                    <div class="price">$4.95</div>
+                    <div class="buttons">
+                        <button type="button" class="btn" onclick="addProduct('s-3')">add to <i
+                                class="fas fa-shopping-cart"></i></button>
+                        <a href="cart.html" class="btn">go to <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+
+
+                <!-- lunch -->
+                <div class="card" data-target="l-1">
+                    <i class="fas fa-times"></i>
+                    <img src="images/menu/lunch_1.png" alt="Salad">
+                    <h3>Salad</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <br>
+                    <h3>Ingredients</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                    <div class="price">$7.95</div>
+                    <div class="buttons">
+                        <button type="button" class="btn" onclick="addProduct('st-1')">add to <i
+                                class="fas fa-shopping-cart"></i></button>
+                        <a href="cart.html" class="btn">go to <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+
+                <div class="card" data-target="l-2">
+                    <i class="fas fa-times"></i>
+                    <img src="images/menu/lunch_2.jpg" alt="Lunch 2">
+                    <h3>Lunch 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <br>
+                    <h3>Ingredients</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                    <div class="price">$6.95</div>
+                    <div class="buttons">
+                        <button type="button" class="btn" onclick="addProduct('st-2')">add to <i
+                                class="fas fa-shopping-cart"></i></button>
+                        <a href="cart.html" class="btn">go to <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+
+                <div class="card" data-target="l-3">
+                    <i class="fas fa-times"></i>
+                    <img src="images/menu/lunch_3.jpg" alt="Lunch 3">
+                    <h3>Lunch 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <br>
+                    <h3>Ingredients</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                    <div class="price">$8.95</div>
+                    <div class="buttons">
+                        <button type="button" class="btn" onclick="addProduct('st-3')">add to <i
+                                class="fas fa-shopping-cart"></i></button>
+                        <a href="cart.html" class="btn">go to <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+
+
+
+                <!-- dinner section -->
+                <div class="card" data-target="d-1">
+                    <i class="fas fa-times"></i>
+                    <img src="images/menu/dinner_1.png" alt="Sandwich">
+                    <h3>Sandwich</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <br>
+                    <h3>Ingredients</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                    <div class="price">$11.95</div>
+                    <div class="buttons">
+                        <button type="button" class="btn" onclick="addProduct('sa-1')">add to <i
+                                class="fas fa-shopping-cart"></i></button>
+                        <a href="cart.html" class="btn">go to <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+
+                <div class="card" data-target="d-2">
+                    <i class="fas fa-times"></i>
+                    <img src="images/menu/dinner_2.jpg" alt="Dinner 2">
+                    <h3>Dinner 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <br>
+                    <h3>Ingredients</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                    <div class="price">$10.95</div>
+                    <div class="buttons">
+                        <button type="button" class="btn" onclick="addProduct('sa-2')">add to <i
+                                class="fas fa-shopping-cart"></i></button>
+                        <a href="cart.html" class="btn">go to <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+
+                <div class="card" data-target="d-3">
+                    <i class="fas fa-times"></i>
+                    <img src="images/menu/dinner_3.jpg" alt="Dinner 3">
+                    <h3>Dinner 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <br>
+                    <h3>Ingredients</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                    <div class="price">$13.95</div>
+                    <div class="buttons">
+                        <button type="button" class="btn" onclick="addProduct('sa-3')">add to <i
+                                class="fas fa-shopping-cart"></i></button>
+                        <a href="cart.html" class="btn">go to <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+
+
+
+                <!-- cards end -->
+        </main>
+
+        <!-- footer section -->
+        <footer class="footer">
+            <div class="copyright">
+                <p>&copy; Copyright
+                    <script>document.write(new Date().getFullYear());</script>. All Rights Reserved.
+                </p>
+                <span><a class="footer-email" href="mailto:contact@sante.com">contact@sante.com</a></span>
+            </div>
+        </footer>
+
+    </div>
+    <!-- end of container -->
+
+</body>
+
+</html>

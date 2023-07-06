@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* 
+CSS styles document for styles + layouts
+*/
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-4rem) scale(0);
+        opacity: 0;
+    }
+}
+
+:root {
+
+    /*Our vars*/
+    --gold: #B8860E;
+    --gold-trans: #b8850e48;
+    --dark-gold: #A0740D;
+    --box-shadow-gold: 0 .5rem 1rem #a0740de0;
+    --border-gold: 1px solid #B8860E;
+
+    --white: #fff;
+    --box-shadow-white: 0 .5rem 1rem rgba(255, 255, 255, 0.8);
+
+    --black: #000;
+    --black-light: rgb(20, 18, 18);
+    --black-pale: rgba(22, 22, 22, 0.911);
+    --black-trans: rgba(0, 0, 0, 0.6);
+    --slide: rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 .5rem 1rem rgba(156, 107, 10, 0.127);
+
+    --red: #EB5757;
+
+    --peru: #cd9452;
+    --light-black: #666;
+    --light-white: #ccc;
+    --light-bg: #f5f5f5;
+    --dark-bg: rgba(0, 0, 0, .7);
+    --border: .1rem solid #aaa;
+
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(.43, 1.1, .62, 1.08);
+    text-transform: capitalize;
+    color: var(--white);
+}
+
+.html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+    /* Firefox scrollbar won't change color */
+    /* scrollbar-color: black; */
+
+}
+
+/* html::scrollbar */
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* html::scrollbar-track */
+html::-webkit-scrollbar-track {
+    background-color: var(--black);
+}
+
+/* html::scrollbar-thumb */
+html::-webkit-scrollbar-thumb {
+    background-color: var(--dark-gold);
+}
+
+.body {
+    background: url(../images/background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.main {
+    padding: 3rem 9%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.heading span {
+    font-size: 2.5rem;
+    color: var(--peru);
+}
+
+.heading h3 {
+    font-size: 4.5rem;
+    color: var(--black);
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    background: var(--black);
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    border-style: solid;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+    color: var(--white);
+    background: var(--gold);
+}
+
+.header {
+    padding: 2rem 10% 2rem 10%;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--black-light);
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--white);
+}
+
+.header .logo i {
+    color: var(--gold);
+    padding-right: 0.5rem;
+}
+
+.header .icons {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+#nav-btn {
+    display: none;
+}
+
+
+.header .icons:hover {
+    color: var(--gold);
+}
+
+.header .navcart {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    width: max-content;
+}
+
+.header .navcart .navbar a {
+    color: var(--white);
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.header .navcart .navbar a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    color: var(--gold)
+}
+
+
+.header .fa-times {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.footer {
+    padding: 2rem 10% 2rem 10%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--black-light);
+    z-index: 1000;
+}
+
+.footer .copyright {
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* media queries  */
+
+@media (max-width:1200px) {
+
+    .main {
+        padding: 3rem 5%;
+    }
+
+}
+
+@media (max-width:991px) {
+
+    .main {
+        padding: 3rem 2rem;
+    }
+
+    .html {
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #nav-btn {
+        display: inline-block;
+    }
+
+    .fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header .navcart .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--black);
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navcart .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navcart .navbar a {
+        display: block;
+        margin: 2rem;
+    }
+
+
+}
+
+@media (max-width:450px) {
+
+    .html {
+        font-size: 50%;
+    }
+
+}

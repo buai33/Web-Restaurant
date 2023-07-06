@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* 
+CSS styles document for menu
+*/
+
+.main {
+    margin-top: 4rem;
+    margin-bottom: 12rem;
+}
+
+.items {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+
+}
+
+.items .title {
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.items .fast-move {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: .8rem;
+    gap: 2.5rem;
+}
+
+.items .fast-move a:hover {
+    text-decoration: underline;
+}
+
+.items .items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+
+}
+
+.items .items-container .item {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--black-pale);
+    box-shadow: var(--box-shadow-white);
+    outline: .1rem solid var(--white);
+    outline-offset: -1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    min-width: 30rem;
+    min-height: 40rem;
+
+    flex: 0 0 calc(33.33% - 20px);
+
+}
+
+.items .items-container .item:hover {
+
+    background: var(--black);
+    box-shadow: var(--box-shadow-gold);
+    outline: .1rem solid var(--dark-gold);
+    outline-offset: 0;
+
+}
+
+.items .items-container .item img {
+    height: 25rem;
+    border-radius: 50%;
+}
+
+.items .items-container .item:hover img {
+    transform: scale(.9);
+}
+
+.items .items-container .item h3 {
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.items .items-container .item:hover h3 {
+    color: var(--gold);
+}
+
+.items .items-container .item .price {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.items-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.items-card .card {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: var(--black-pale);
+    position: relative;
+    margin: 2rem;
+    width: 60rem;
+}
+
+.items-card .card.select {
+    display: inline-block;
+}
+
+.items-card .card img {
+    width: 40rem;
+    border-radius: 50%;
+}
+
+.items-card .card .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    font-size: 4rem;
+    color: var(--white);
+
+}
+
+.items-card .card .fa-times:hover {
+
+    transform: rotate(90deg);
+    color: var(--gold);
+
+}
+
+.items-card .card h3 {
+    color: var(--white);
+    /* padding:.5rem 0; */
+    font-size: 2.5rem;
+
+}
+
+.items-card .card p {
+    text-transform: none;
+    /* line-height: 1.5; */
+
+    font-size: 1.7rem;
+    color: var(--white);
+
+
+}
+
+.items-card .card .price {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-top: 1rem;
+}
+
+.items-card .card .buttons {
+    display: flex;
+    gap: 6rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    justify-content: center;
+
+}
+
+/*Toast message style*/
+.toastify {
+    text-transform: none;
+    font-size: 1.5rem;
+    padding: 12px 20px;
+    color: var(--white);
+    display: inline-block;
+    box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 36px -4px rgba(77, 96, 232, 0.3);
+    background: -webkit-linear-gradient(315deg, var(--gold), var(--dark-gold));
+    background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+    position: fixed;
+    top: -150px;
+    /* right: 15px; */
+    right: 50%;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.toastify.on {
+    opacity: 1;
+}
+
+/* media queries  */
+
+@media (max-width:1200px) {}
+
+@media (max-width:991px) {
+
+    .items-card .card img {
+        width: 30rem;
+    }
+
+    .items-card .card h3 {
+        font-size: 2.2rem;
+    }
+
+    .items-card .card p {
+        font-size: 1.5rem;
+    }
+
+    .items-card .card .price {
+        font-size: 2.2rem;
+    }
+
+
+}
+
+@media (max-width:768px) {
+
+    .items-card .card img {
+        width: 20rem;
+    }
+
+    .items-card .card .buttons {
+        gap: 2rem;
+    }
+
+    .items .fast-move {
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width:450px) {}

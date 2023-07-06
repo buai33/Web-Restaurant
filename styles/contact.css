@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* helper classes */
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+
+.main {
+    padding: 3rem 9%;
+    margin-top: 8rem;
+    margin-bottom: 12rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+
+}
+
+.main h3 {
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* contact info section */
+.contact .info-wrap {
+    padding: 30px;
+}
+
+.contact .info {
+    background: #fff;
+}
